@@ -1,0 +1,10 @@
+Klasse A heeft een attribuut teller en de methoden telOp() en telAf(). In telOp() wordt teller met 1 verhoogd en in telAf() wordt teller met 1 verlaagd.
+Als teller gelijk is aan 5 moet telOp() blijven wachten, door een aanroep van wait(), totdat teller gelijk wordt aan 0.
+In telAf() moet, als teller gelijk wordt aan 0, wachtende telOp() methoden hiervan op de hoogte gesteld worden door een aanroep van notifyAll().
+Klasse B heeft de methode run() die met tussenposen van 1 seconde telOp() aanroept en de waarde van teller afdrukt.
+Klasse C heeft de methode run() die met tussenposen van 2 seconde telAf() aanroept en de waarde van teller afdrukt.
+Omdat meerdere threads tegelijk telOp() en telAf() kunnen aanroepen, die het attribuut teller ophalen, wijzigen en terugzetten, moeten deze methoden dus gesynchroniseerd worden.
+denkbarerun: Threadbencwisselen
+Thread b wordt nu onderbroken
+Thread b wordt hervat
+Schrijf code voor de klassen A, B en C en een methode main() om bovenstaande te demonstreren.
